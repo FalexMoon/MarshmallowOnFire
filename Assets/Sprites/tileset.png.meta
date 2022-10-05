@@ -1136,7 +1136,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_48
+      name: fondo_0
       rect:
         serializedVersion: 2
         x: 128
@@ -1493,7 +1493,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_65
+      name: fondo_1
       rect:
         serializedVersion: 2
         x: 152
@@ -1514,7 +1514,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_66
+      name: fondo_11
       rect:
         serializedVersion: 2
         x: 160
@@ -1535,7 +1535,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_67
+      name: fondo_12
       rect:
         serializedVersion: 2
         x: 168
@@ -1703,7 +1703,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_75
+      name: fondo_2
       rect:
         serializedVersion: 2
         x: 112
@@ -1724,7 +1724,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_76
+      name: fondo_4
       rect:
         serializedVersion: 2
         x: 120
@@ -1745,7 +1745,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_77
+      name: fondo_5
       rect:
         serializedVersion: 2
         x: 128
@@ -1766,7 +1766,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_78
+      name: fondo_7
       rect:
         serializedVersion: 2
         x: 136
@@ -1787,7 +1787,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_79
+      name: fondo_9
       rect:
         serializedVersion: 2
         x: 144
@@ -1808,7 +1808,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_80
+      name: fondo_10
       rect:
         serializedVersion: 2
         x: 152
@@ -2060,7 +2060,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_92
+      name: fondo_3
       rect:
         serializedVersion: 2
         x: 120
@@ -2081,7 +2081,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_93
+      name: fondo_6
       rect:
         serializedVersion: 2
         x: 128
@@ -2102,7 +2102,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tileset_94
+      name: fondo_8
       rect:
         serializedVersion: 2
         x: 136
@@ -2217,7 +2217,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tileset_79: -772817022
       Ground_10: 521056984
       tileset_36: -1318743630
       Ground_13: -610203743
@@ -2234,6 +2233,7 @@ TextureImporter:
       tileset_9: 1814261650
       tileset_98: -723842165
       tileset_42: 998954901
+      fondo_7: 1503187214
       Ground_7: -145266279
       tileset_23: -2119556949
       pasto_1: 1801602684
@@ -2243,44 +2243,45 @@ TextureImporter:
       Arbol_11: 2012014451
       tileset_22: -397272123
       Ground_12: -83369735
-      tileset_80: 1640404577
       pasto_3: -755243840
       tileset_91: 908181898
       Ground_4: -1047704662
       tileset_44: -1504070155
+      fondo_11: 103155316
       tileset_53: -2123112666
       tileset_15: -1600464513
       Arbol_6: -1524919092
       tileset_10: -919442622
-      tileset_66: 103155316
+      fondo_12: 1909717477
       flor_1: -172191570
       tileset_14: -2067839024
-      tileset_94: -610091181
       tileset_84: -889262083
       Ground_15: -749777468
-      tileset_48: -536261136
       tileset_68: -479144717
       Ground_9: 1704894308
       tileset_12: 1733877904
       pasto_5: -1662320160
       tileset_64: 1041225045
+      fondo_0: -536261136
       Ground_11: -902409175
       Ground_5: 823153333
       Arbol_10: 1562269999
-      tileset_76: -294746999
       pasto_4: -281659463
       tileset_24: 1211046988
+      fondo_5: 561097533
+      fondo_2: -1323281844
       Ground_6: -1720368643
       tileset_61: 1431344036
       tileset_50: 1941512107
-      tileset_75: -1323281844
+      fondo_10: 1640404577
       Arbol_2: -1364380937
+      fondo_8: -610091181
       tileset_21: -1558908977
-      tileset_77: 561097533
       Arbol_1: -661325164
       tileset_19: -1253593656
       tileset_97: -2058869409
       tileset_81: 571902679
+      fondo_3: 842296759
       tileset_62: 795417776
       tileset_43: -1388336941
       tileset_82: -1837026108
@@ -2289,32 +2290,31 @@ TextureImporter:
       tileset_38: 316885437
       tileset_37: -809448477
       tileset_49: -18618465
-      tileset_93: 176344460
+      fondo_9: -772817022
       Arbol_9: 1339558458
       tileset_60: 1724549271
-      tileset_92: 842296759
       Ground_3: -413175001
       tileset_47: 1071625194
       Ground_8: -564590113
       pasto_2: -2043772627
       tileset_20: -778883408
       tileset_32: -2140965801
-      tileset_65: -2135849831
-      tileset_67: 1909717477
       tileset_31: -1225738358
       tileset_13: -376658308
       Ground_2: -1143607150
       tileset_69: -1448017942
+      fondo_1: -2135849831
       tileset_63: 107216517
       Ground_14: 549990164
       tileset_45: -838300692
       flor_2: 433669088
       tileset_35: -6029725
+      fondo_6: 176344460
       Arbol_7: -1699959929
+      fondo_4: -294746999
       tileset_33: -1195868783
-      tileset_34: 627037739
-      tileset_78: 1503187214
       Arbol_3: -1443827392
+      tileset_34: 627037739
       Ground_1: -956390934
   spritePackingTag: 
   pSDRemoveMatte: 0
