@@ -10,10 +10,8 @@ public class ScratchTiles : MonoBehaviour
     public RuleTile tile;
     public int tilesPorUnidad = 1;
 
-    void Start()
-    {
+    public GameObject dirtEffect;
 
-    }
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -34,6 +32,8 @@ public class ScratchTiles : MonoBehaviour
             Vector3Int finalPos = grid.WorldToCell(placePos);
             if (mapa.HasTile(finalPos))
             {
+                GameObject effect = Instantiate(dirtEffect,placePos,Quaternion.identity);
+                Destroy(effect, 1);
                 mapa.SetTile(finalPos, null);
             }
         }

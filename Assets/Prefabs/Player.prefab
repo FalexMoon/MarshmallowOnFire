@@ -144,6 +144,7 @@ MonoBehaviour:
   wallMask:
     serializedVersion: 2
     m_Bits: 64
+  fire: {fileID: 1638065197218750456}
 --- !u!60 &1973881366
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -260,6 +261,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a34f4b8b594183b4c81e134e3abf365d, type: 3}
+--- !u!198 &1638065197218750456 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8597349061244628642, guid: a34f4b8b594183b4c81e134e3abf365d, type: 3}
+  m_PrefabInstance: {fileID: 7058399512118784346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2847475784276917864 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5075623670789656370, guid: a34f4b8b594183b4c81e134e3abf365d, type: 3}
