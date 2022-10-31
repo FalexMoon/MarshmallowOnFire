@@ -12,8 +12,7 @@ public class Water : MonoBehaviour
         {
             GameObject effect = Instantiate(waterEffect, collision.transform.position - new Vector3(0, 0.5f), Quaternion.Euler(new Vector3(0,0,45)));
             Player player = collision.GetComponent<Player>();
-            player.fire.Stop();
-            player.running = false;
+            player.Aguita();
             Destroy(effect, 1);
         }
     }

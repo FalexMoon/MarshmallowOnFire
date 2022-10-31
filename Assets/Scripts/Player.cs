@@ -12,13 +12,15 @@ public class Player : MonoBehaviour
     bool isCollidingWall;
 
     Rigidbody2D rb;
+    Animator anim;
 
-    public bool running = true;
+    bool running = true;
     public ParticleSystem fire;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -34,5 +36,12 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(vel, rb.velocity.y);
         }
+    }
+
+    public void Aguita()
+    {
+        fire.Stop();
+        running = false;
+        anim.SetBool("Idle", true);
     }
 }
