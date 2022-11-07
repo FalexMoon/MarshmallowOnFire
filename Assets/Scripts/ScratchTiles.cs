@@ -12,29 +12,34 @@ public class ScratchTiles : MonoBehaviour
 
     public GameObject dirtEffect;
 
+    public bool canScratch = true;
+
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (canScratch)
         {
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            placePos = RoundToNearestHalf(worldPosition);
-            Vector3Int finalPos = grid.WorldToCell(placePos);
-            if (!mapa.HasTile(finalPos))
+            if (Input.GetMouseButton(0))
             {
-                mapa.SetTile(finalPos, tile);
-            }
+                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                placePos = RoundToNearestHalf(worldPosition);
+                Vector3Int finalPos = grid.WorldToCell(placePos);
+                if (!mapa.HasTile(finalPos))
+                {
+                    mapa.SetTile(finalPos, tile);
+                }
 
-        }
-        else if (Input.GetMouseButton(1))
-        {
-            Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            placePos = RoundToNearestHalf(worldPosition);
-            Vector3Int finalPos = grid.WorldToCell(placePos);
-            if (mapa.HasTile(finalPos))
+            }
+            else if (Input.GetMouseButton(1))
             {
-                GameObject effect = Instantiate(dirtEffect,placePos,Quaternion.identity);
-                Destroy(effect, 1);
-                mapa.SetTile(finalPos, null);
+                Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                placePos = RoundToNearestHalf(worldPosition);
+                Vector3Int finalPos = grid.WorldToCell(placePos);
+                if (mapa.HasTile(finalPos))
+                {
+                    GameObject effect = Instantiate(dirtEffect, placePos, Quaternion.identity);
+                    Destroy(effect, 1);
+                    mapa.SetTile(finalPos, null);
+                }
             }
         }
     }

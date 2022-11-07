@@ -8,23 +8,17 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUi;
 
     Animator anim;
+    LevelManager levelManager;
     private void Start()
     {
         anim = GetComponent<Animator>();
+        levelManager = FindObjectOfType<LevelManager>();
     }
 
     public void Pause(bool pause)
     {
        StartCoroutine(ChangePause(pause));
     }
-    /*
-    public void Resume()
-    {
-        pauseMenuUi.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
-
-    }*/
 
     public IEnumerator ChangePause(bool pause)
     {
@@ -35,12 +29,14 @@ public class PauseMenu : MonoBehaviour
         {
             yield return new WaitForSeconds(0.15f);
             Time.timeScale = pause ? 0f : 1f;
+            levelManager.PauseLevel(pause);
         }
         else
         {
             Time.timeScale = pause ? 0f : 1f;
             yield return new WaitForSeconds(0.5f);
             pauseMenuUi.SetActive(false);
+            levelManager.PauseLevel(pause);
         }
         
     }

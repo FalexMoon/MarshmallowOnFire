@@ -11,6 +11,11 @@ public class Transition : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    public void CambiarEscena(int sceneIndex)
+    {
+        StartCoroutine(ChangeScene(sceneIndex));
+    }
+
     public IEnumerator ChangeScene(int sceneIndex)
     {
         anim.SetTrigger("End");
