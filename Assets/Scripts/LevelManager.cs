@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     Transition transition;
     ScratchTiles scratch;
-
+    public int nextLevelIndex;
     private void Start()
     {
         transition = FindObjectOfType<Transition>();
@@ -20,7 +20,7 @@ public class LevelManager : MonoBehaviour
     }
     public void LevelComplete()
     {
-        transition.CambiarEscena(SceneManager.GetActiveScene().buildIndex);
+        transition.CambiarEscena(nextLevelIndex);
     }
     public void PauseLevel(bool isPaused)
     {
