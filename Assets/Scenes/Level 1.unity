@@ -9728,7 +9728,7 @@ Tilemap:
       - {fileID: -943354526, guid: 6202c1f492a2ae347a84099afcc172ba, type: 3}
       - {fileID: 785724922, guid: 6202c1f492a2ae347a84099afcc172ba, type: 3}
       - {fileID: -1682419412, guid: 6202c1f492a2ae347a84099afcc172ba, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_IsLooping: 1
   m_TileAssetArray:
@@ -9804,10 +9804,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 262150774716895413, guid: 3caa09b75f14c8949836f659ed8aaeb5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5760835026675055010, guid: 3caa09b75f14c8949836f659ed8aaeb5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -9851,10 +9847,6 @@ PrefabInstance:
     - target: {fileID: 5760835026675055010, guid: 3caa09b75f14c8949836f659ed8aaeb5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5760835026675055011, guid: 3caa09b75f14c8949836f659ed8aaeb5, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5760835026675055015, guid: 3caa09b75f14c8949836f659ed8aaeb5, type: 3}
       propertyPath: m_Name
