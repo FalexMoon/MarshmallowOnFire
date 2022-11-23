@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2235bb836213d304eb040c391413a721
+guid: d4e9eb3ec1283f14ea4e0b096174b768
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,97 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Die1_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3792e82ec3cfb404383b9886204e75bf
-      internalID: 637122174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Die1_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca911ec28add83d4f9b6a78b1dc117fa
-      internalID: -1977354610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Die1_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2cb5f5ca757ff7f4da54ab6a769129eb
-      internalID: 1360286803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Die1_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7eee39b0ac956ca4b905c27ec3b89968
-      internalID: -1143700526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Die1_4
+      name: Firecamp_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dcae6dff9695024ba3d8b21155c8cad
-      internalID: 467650536
+      spriteID: 5c5c4255aaf1c724ebc3309044341b62
+      internalID: -1543133671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die1_5
+      name: Firecamp_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 12
         y: 0
-        width: 16
-        height: 16
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bdf3cf0f2750644e99e1bbdac4a1c62
-      internalID: -955535955
+      spriteID: d8d43e767546cf342b8d4237d67f4ca7
+      internalID: -1394190039
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die1_6
+      name: Firecamp_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 24
         y: 0
-        width: 16
-        height: 16
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de23fe86cc6b5e946b5ee896e29738dd
-      internalID: -624864283
+      spriteID: 8c608dc67bf5a644caf6e80a3250149e
+      internalID: 1999574672
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Die1_7
+      name: Firecamp_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 36
         y: 0
-        width: 16
-        height: 16
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5adac8165d3ae094f98a9e36641441eb
-      internalID: -607238343
+      spriteID: 277a4d7ab55f7e44a91eab2db846d0ce
+      internalID: -547623536
       vertices: []
       indices: 
       edges: []
@@ -306,14 +222,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Die1_2: 1360286803
-      Die1_6: -624864283
-      Die1_0: 637122174
-      Die1_1: -1977354610
-      Die1_4: 467650536
-      Die1_7: -607238343
-      Die1_3: -1143700526
-      Die1_5: -955535955
+      Firecamp_0: -1543133671
+      Firecamp_1: -1394190039
+      Firecamp_3: -547623536
+      Firecamp_2: 1999574672
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

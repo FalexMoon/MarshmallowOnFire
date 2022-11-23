@@ -40,4 +40,10 @@ public class PauseMenu : MonoBehaviour
         }
         
     }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;
+        FindObjectOfType<LevelManager>().ChangeScene(0);
+    }
 }

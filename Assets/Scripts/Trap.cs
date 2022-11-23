@@ -8,8 +8,7 @@ public class Trap : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            print("Se muere");
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Player>().Die();
         }
     }
 }

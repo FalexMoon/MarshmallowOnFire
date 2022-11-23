@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 
     bool running = true;
     public ParticleSystem fire;
+    public GameObject dieEffect;
 
     private void Start()
     {
@@ -43,5 +44,13 @@ public class Player : MonoBehaviour
         fire.Stop();
         running = false;
         anim.SetBool("Idle", true);
+    }
+
+    public void Die()
+    {
+        GameObject effect = Instantiate(dieEffect,transform.position,Quaternion.identity);
+        Destroy(effect, 2);
+        Destroy(gameObject);
+        FindObjectOfType<LevelManager>().RestartLevel();
     }
 }
