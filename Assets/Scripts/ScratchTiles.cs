@@ -14,6 +14,21 @@ public class ScratchTiles : MonoBehaviour
 
     public bool canScratch = true;
 
+    public AudioClip sound;
+    List<AudioSource> audios = new List<AudioSource>();
+
+    private void Start()
+    {
+        for(int i = 0; i < 10; i++)
+        {
+            audios.Add(new GameObject("FX " + i).AddComponent<AudioSource>().GetComponent<AudioSource>());
+            audios[i].transform.parent = transform;
+            audios[i].clip = sound;
+            audios[i].volume = 0.5f;
+            audios[i].playOnAwake = false;
+        }
+    }
+
     void Update()
     {
         if (canScratch)
@@ -38,6 +53,13 @@ public class ScratchTiles : MonoBehaviour
                 {
                     GameObject effect = Instantiate(dirtEffect, placePos, Quaternion.identity);
                     Destroy(effect, 1);
+                    foreach(AudioSource aud in audios){
+                        if (!aud.isPlaying)
+                        {
+                            aud.Play();
+                            break;
+                        }
+                    }
                     mapa.SetTile(finalPos, null);
                 }
             }

@@ -7,12 +7,17 @@ public class Player : MonoBehaviour
     public float vel;
     bool dirR = true;
 
+    public Transform groundChecker;
     public Transform wallChecker;
     public LayerMask wallMask;
     bool isCollidingWall;
+    bool isCollidingGround;
 
     Rigidbody2D rb;
     Animator anim;
+    AudioSource aud;
+    float audVolume;
+    public AudioClip tss;
 
     bool running = true;
     public ParticleSystem fire;
@@ -22,11 +27,14 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        aud = GetComponent<AudioSource>();
+        audVolume = aud.volume;
     }
 
     private void Update()
     {
         isCollidingWall = Physics2D.OverlapCircle(wallChecker.transform.position, 0.1f, wallMask);
+        isCollidingGround = Physics2D.OverlapCircle(groundChecker.transform.position, 0.05f, wallMask);
         if (isCollidingWall)
         {
             dirR = !dirR;
@@ -37,11 +45,26 @@ public class Player : MonoBehaviour
         {
             rb.velocity = new Vector2(vel, rb.velocity.y);
         }
+        if (running && isCollidingGround && aud.volume != audVolume)
+        {
+            aud.volume = audVolume;
+
+        }else if(!isCollidingGround || !running)
+        {
+            if (audVolume != 0)
+            {
+                aud.volume = 0;
+            }
+        }
     }
 
     public void Aguita()
     {
         fire.Stop();
+        AudioSource audFire = fire.GetComponent<AudioSource>();
+        audFire.loop = false;
+        audFire.clip = tss;
+        audFire.Play();
         running = false;
         anim.SetBool("Idle", true);
     }
