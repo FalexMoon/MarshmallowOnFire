@@ -8662,6 +8662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35361ab459938e41b86e5d576863080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBeforeDeath: 0
 --- !u!4 &952689745
 Transform:
   m_ObjectHideFlags: 0
@@ -8808,7 +8809,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 27ba39405164b3f48ac08d10908d6c20, type: 3}
   - {fileID: 8300000, guid: ea7493352f65ae7498f95d687fb6e140, type: 3}
   - {fileID: 8300000, guid: 39e01c8b8ea727044a126381916905ed, type: 3}
-  - {fileID: 8300000, guid: 7958e5423518aab43be10ffe8662077d, type: 3}
   - {fileID: 8300000, guid: b5f8b9c096e22f546b27a53799151833, type: 3}
 --- !u!114 &1032991704
 MonoBehaviour:
