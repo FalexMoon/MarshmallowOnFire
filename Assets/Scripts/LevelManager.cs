@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     ScratchTiles scratch;
 
     public float timeBeforeDeath;
-    float timeRemaining;
+    public float timeRemaining;
     Player player;
     SpriteRenderer playerSprite;
     MusicManager music;
@@ -39,6 +39,10 @@ public class LevelManager : MonoBehaviour
                 player.Faster();
                 music.IncreasePitch(1);
             }
+        }
+        if(timeRemaining <= 0 && player)
+        {
+            player.Die();
         }
     }
 

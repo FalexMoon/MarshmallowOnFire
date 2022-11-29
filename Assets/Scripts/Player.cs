@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     public ParticleSystem fire;
     ParticleSystem fire2;
     public GameObject dieEffect;
+    public GameObject dieEffectTostado;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        isCollidingWall = Physics2D.OverlapCircle(wallChecker.transform.position, 0.1f, wallMask);
+        isCollidingWall = Physics2D.OverlapCircle(wallChecker.transform.position, 0.05f, wallMask);
         isCollidingGround = Physics2D.OverlapCircle(groundChecker.transform.position, 0.05f, wallMask);
         if (isCollidingWall)
         {
@@ -75,8 +76,24 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        GameObject effect = Instantiate(dieEffect,transform.position,Quaternion.identity);
-        Destroy(effect, 2);
+        LevelManager lvl = FindObjectOfType<LevelManager>();
+        if (lvl.timeRemaining < lvl.timeBeforeDeath / 2)
+        {
+            GameObject effect = Instantiate(dieEffectTostado, transform.position, Quaternion.identity);
+            Destroy(effect, 2);
+        }
+        else
+        {
+            GameObject effect = Instantiate(dieEffect,transform.position,Quaternion.identity);
+            Destroy(effect, 2);
+        }
+        ParticleSystem[] effectos = GetComponentsInChildren<ParticleSystem>();
+        foreach (ParticleSystem p in effectos)
+        {
+            p.gameObject.transform.parent = null;
+            p.Stop();
+            Destroy(p.gameObject, 2);
+        }
         Destroy(gameObject);
         FindObjectOfType<LevelManager>().RestartLevel();
     }
