@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     SpriteRenderer playerSprite;
     MusicManager music;
     bool resetMusic;
+    bool faster;
 
     private void Start()
     {
@@ -32,7 +33,12 @@ public class LevelManager : MonoBehaviour
         {
             timeRemaining -= Time.deltaTime;
             QuemarBombon();
-            music.IncreasePitch(1 / timeBeforeDeath * Time.deltaTime);
+            if (timeRemaining < timeBeforeDeath/2 && faster == false)
+            {
+                faster = true;
+                player.Faster();
+                music.IncreasePitch(1);
+            }
         }
     }
 

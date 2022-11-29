@@ -38,30 +38,28 @@ public class MusicManager : MonoBehaviour
 
         if(reset == true)
         {
-           /* if (aud.pitch > inicialPitch)
+           if(aud.pitch > inicialPitch)
             {
                 if (aud.volume > 0)
                 {
-                    aud.volume -= Time.deltaTime/2;
+                    aud.volume -= Time.deltaTime / 2;
                 }
                 else
                 {
                     aud.pitch = inicialPitch;
                 }
-            }else if(aud.pitch == inicialPitch && aud.volume <= 0)
+            }
+            else
             {
-                print("AAAA");
-                aud.volume += Time.deltaTime/2;
-                if(aud.volume >= inicialVolume)
+                if (aud.volume < inicialVolume)
                 {
-                    aud.volume = inicialVolume;
+                    aud.volume += Time.deltaTime / 2;
+                }
+                else
+                {
                     reset = false;
                 }
             }
-            if(aud.volume == inicialVolume && aud.pitch == inicialPitch)
-            {
-                reset = false;
-            }*/
         }
     }
 

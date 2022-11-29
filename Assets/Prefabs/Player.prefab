@@ -181,6 +181,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   tss: {fileID: 8300000, guid: 361146e342bdef745ac47f7fcaa4d42a, type: 3}
+  fireball: {fileID: 8300000, guid: 370c09ccde5c327439eabd9fd5779d1a, type: 3}
   fire: {fileID: 1638065197218750456}
   dieEffect: {fileID: 4023099394812310356, guid: 7347b607e720e174493f34320764077d, type: 3}
 --- !u!60 &1973881366

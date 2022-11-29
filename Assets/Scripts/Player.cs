@@ -18,9 +18,11 @@ public class Player : MonoBehaviour
     AudioSource aud;
     float audVolume;
     public AudioClip tss;
+    public AudioClip fireball;
 
     bool running = true;
     public ParticleSystem fire;
+    ParticleSystem fire2;
     public GameObject dieEffect;
 
     private void Start()
@@ -61,6 +63,8 @@ public class Player : MonoBehaviour
     public void Aguita()
     {
         fire.Stop();
+        if (fire2)
+            fire2.Stop();
         AudioSource audFire = fire.GetComponent<AudioSource>();
         audFire.loop = false;
         audFire.clip = tss;
@@ -75,5 +79,18 @@ public class Player : MonoBehaviour
         Destroy(effect, 2);
         Destroy(gameObject);
         FindObjectOfType<LevelManager>().RestartLevel();
+    }
+
+    public void Faster()
+    {
+        fire2 = Instantiate(fire.gameObject, transform.position, Quaternion.identity).GetComponent<ParticleSystem>();
+        fire2.gameObject.transform.parent = transform;
+        fire2.Play();
+        AudioSource fireBall = new GameObject("fireballEffect").AddComponent<AudioSource>().GetComponent<AudioSource>();
+        fireBall.clip = fireball;
+        fireBall.volume = 0.4f;
+        fireBall.Play();
+        Destroy(fireBall.gameObject, 2);
+
     }
 }
