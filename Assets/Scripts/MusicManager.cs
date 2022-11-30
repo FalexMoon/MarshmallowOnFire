@@ -13,6 +13,8 @@ public class MusicManager : MonoBehaviour
 
     void Start()
     {
+
+        AudioListener.volume = PlayerPrefs.GetFloat("Volumen", 1f);
         aud = GetComponent<AudioSource>();
         inicialPitch = aud.pitch;
         inicialVolume = aud.volume;

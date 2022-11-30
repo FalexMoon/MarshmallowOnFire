@@ -33,7 +33,7 @@ public class ScratchTiles : MonoBehaviour
     {
         if (canScratch)
         {
-            if (Input.GetMouseButton(0))
+            /*if (Input.GetMouseButton(0))
             {
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 placePos = RoundToNearestHalf(worldPosition);
@@ -44,7 +44,7 @@ public class ScratchTiles : MonoBehaviour
                 }
 
             }
-            else if (Input.GetMouseButton(1))
+            else */if (Input.GetMouseButton(0))
             {
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 placePos = RoundToNearestHalf(worldPosition);

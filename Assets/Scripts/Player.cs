@@ -105,9 +105,20 @@ public class Player : MonoBehaviour
         fire2.Play();
         AudioSource fireBall = new GameObject("fireballEffect").AddComponent<AudioSource>().GetComponent<AudioSource>();
         fireBall.clip = fireball;
-        fireBall.volume = 0.4f;
+        fireBall.volume = 0.5f;
         fireBall.Play();
         Destroy(fireBall.gameObject, 2);
 
+    }
+    public void Mute(bool mute)
+    {
+        if (mute)
+        {
+            aud.Pause();
+        }
+        else
+        {
+            aud.Play();
+        }
     }
 }

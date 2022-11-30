@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
     MusicManager music;
     bool resetMusic;
     bool faster;
+    bool countDown = true;
 
     private void Start()
     {
@@ -29,7 +30,7 @@ public class LevelManager : MonoBehaviour
 
     private void Update()
     {
-        if (timeRemaining > 0 && resetMusic == false)
+        if (timeRemaining > 0 && resetMusic == false && countDown)
         {
             timeRemaining -= Time.deltaTime;
             QuemarBombon();
@@ -37,12 +38,21 @@ public class LevelManager : MonoBehaviour
             {
                 faster = true;
                 player.Faster();
-                music.IncreasePitch(1);
+                StartCoroutine(wait());
             }
         }
         if(timeRemaining <= 0 && player)
         {
             player.Die();
+        }
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForSeconds(0.2f);
+        if (countDown)
+        {
+            music.IncreasePitch(1);
         }
     }
 
@@ -53,11 +63,13 @@ public class LevelManager : MonoBehaviour
     }
     public void RestartLevel()
     {
+        countDown = false;
         music.ResetValues();
         transition.CambiarEscena(SceneManager.GetActiveScene().buildIndex);
     }
     public void LevelComplete()
     {
+        countDown = false;
         music.ResetValues();
         if (SceneManager.GetActiveScene().buildIndex+1 < SceneManager.sceneCountInBuildSettings)
         {
@@ -76,5 +88,6 @@ public class LevelManager : MonoBehaviour
     public void PauseLevel(bool isPaused)
     {
         scratch.canScratch = !isPaused;
+        player.Mute(isPaused);
     }
 }

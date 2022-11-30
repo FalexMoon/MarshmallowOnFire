@@ -600,7 +600,7 @@ MonoBehaviour:
   tilesPorUnidad: 1
   dirtEffect: {fileID: 5664455173146094761, guid: d6d2cc993e9ea1d4792a34a2c062b401, type: 3}
   canScratch: 1
-  sound: {fileID: 8300000, guid: 5fe9dc559b950264e89331084419d2bc, type: 3}
+  sound: {fileID: 8300000, guid: d37e17a0ad857c04a8f4837b2c41bc3c, type: 3}
 --- !u!1 &1618985977609062337
 GameObject:
   m_ObjectHideFlags: 0
