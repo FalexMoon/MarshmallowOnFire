@@ -7,6 +7,12 @@ public class Water : MonoBehaviour
 {
     public GameObject waterEffect;
     public GameObject yeiEffect;
+    AudioSource aud;
+
+    private void Start()
+    {
+        aud = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -15,6 +21,7 @@ public class Water : MonoBehaviour
             GameObject effect = Instantiate(waterEffect, collision.transform.position - new Vector3(0, 0.5f), Quaternion.Euler(new Vector3(0,0,45)));
             Player player = collision.GetComponent<Player>();
             player.Aguita();
+            aud.Play();
             Destroy(effect, 1);
             StartCoroutine(Yei(collision.gameObject));
         }

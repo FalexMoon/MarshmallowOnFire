@@ -14,11 +14,26 @@ public class ScratchTiles : MonoBehaviour
 
     public bool canScratch = true;
 
+    public AudioClip sound;
+    List<AudioSource> audios = new List<AudioSource>();
+
+    private void Start()
+    {
+        for(int i = 0; i < 10; i++)
+        {
+            audios.Add(new GameObject("FX " + i).AddComponent<AudioSource>().GetComponent<AudioSource>());
+            audios[i].transform.parent = transform;
+            audios[i].clip = sound;
+            audios[i].volume = 0.5f;
+            audios[i].playOnAwake = false;
+        }
+    }
+
     void Update()
     {
         if (canScratch)
         {
-            if (Input.GetMouseButton(0))
+            /*if (Input.GetMouseButton(0))
             {
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 placePos = RoundToNearestHalf(worldPosition);
@@ -29,7 +44,7 @@ public class ScratchTiles : MonoBehaviour
                 }
 
             }
-            else if (Input.GetMouseButton(1))
+            else */if (Input.GetMouseButton(0))
             {
                 Vector3 worldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 placePos = RoundToNearestHalf(worldPosition);
@@ -38,6 +53,13 @@ public class ScratchTiles : MonoBehaviour
                 {
                     GameObject effect = Instantiate(dirtEffect, placePos, Quaternion.identity);
                     Destroy(effect, 1);
+                    foreach(AudioSource aud in audios){
+                        if (!aud.isPlaying)
+                        {
+                            aud.Play();
+                            break;
+                        }
+                    }
                     mapa.SetTile(finalPos, null);
                 }
             }
